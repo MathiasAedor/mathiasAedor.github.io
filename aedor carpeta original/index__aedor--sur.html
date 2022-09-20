@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Hola!, bienvenido a AEDOR</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index__aedor--sur.css" />
+  </head>
+
+  <body>
+    <header class="header" id="inicio">
+      <img src="bx-menu-alt-right.svg" alt="=" class="hamburguer" />
+      <nav class="menu-navegacion">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servio</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#expertos">Expertos</a>
+        <a href="#contacto">Contactanos</a>
+      </nav>
+      <div class="contenedor head">
+        <h1 class="titulo">Convertimos tus sueños en realidad</h1>
+        <p class="copy">
+          Somos aedor, impulsamos tus sueños para que se hagan realidad
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="services contenedor" id="servicios">
+        <h2 class="subtitulo">Nuestro servicio</h2>
+        <div class="contenedor-servicio">
+          <img src="soccer(2).png" alt="" />
+          <div class="checklist-servicio">
+            <div class="service">
+              <h3 class="n-service">
+                <span class="number">1</span> Control de balon
+              </h3>
+              <p>
+                Te enseñamos control de bolon orientacion y acomodarte a tu
+                posición que mas te guste
+              </p>
+            </div>
+            <div class="service">
+              <h3 class="n-service"><span class="number">2</span> Control</h3>
+              <p>
+                Te enseñamos control de orientado para llevar si estas de
+                espalldas si no tienes que apoyarte con tu compañero
+              </p>
+            </div>
+            <div class="service">
+              <h3 class="n-service">
+                <span class="number">3</span> Si no te gusta
+              </h3>
+              <p>
+                si no te gusta depende puedes irte pero la prueba cuesta S/3.50
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" id="portafolio">
+        <div class="contenedor">
+          <h2 class="subtitulo">Galeria</h2>
+          <div class="contenedor-galeria">
+            <img src="1.jpg" alt="1" class="img-galeria" />
+            <img src="2.jpg" alt="1" class="img-galeria" />
+            <img src="3.jpg" alt="1" class="img-galeria" />
+            <img src="trabajadores1.jpg" alt="1" class="img-galeria" />
+            <img src="trabajadores2.jpg" alt="1" class="img-galeria" />
+            <img src="trabajadores3.jpg" alt="1" class="img-galeria" />
+          </div>
+        </div>
+      </section>
+      <section class="imagen-light">
+        <img src="bx-x (1).svg" alt="" class="close" />
+        <img src="1.jpg" alt="" class="agregar-imagen" />
+      </section>
+
+      <section class="contenedor" id="expertos">
+        <h2 class="subtitulo">Expertos en:</h2>
+        <section class="experts">
+          <div class="cont-expert">
+            <img src="Security_Isometric.png" alt="" />
+            <h3 class="n-expert">Seguridad</h3>
+          </div>
+          <div class="cont-expert">
+            <img src="Search Engine_Isometric.png" alt="" />
+            <h3 class="n-expert">Analización</h3>
+          </div>
+          <div class="cont-expert">
+            <img src="Soccer_Isometric.png" alt="" />
+            <h3 class="n-expert">Futbol</h3>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer id="contacto">
+      <div class="contenedor footer-content">
+        <div class="contact-us">
+          <h2 class="brand">Mathias cg Desing</h2>
+          <p>Somos expertos en la creación de tus sueños</p>
+        </div>
+        <div class="social-media">
+          <a href="" class="social-media-icon">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="" class="social-media-icon">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="" class="social-media-icon">
+            <i class="bx bxl-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="line"></div>
+      <nav class="menu-navegacion--two">
+        <a href="#inicio">Inicio</a>
+        <a href="servicios.html">Servio</a>
+        <a href="index.html">Contactanos</a>
+      </nav>
+    </footer>
+    <script>
+      const imagenes = document.querySelectorAll(".img-galeria");
+      const imagenesLight = document.querySelector(".agregar-imagen");
+      const contenedorLight = document.querySelector(".imagen-light");
+
+      imagenes.forEach((imagen) => {
+        imagen.addEventListener("click", () => {
+          aparecerImg(imagen.getAttribute("src"));
+        });
+      });
+
+      contenedorLight.addEventListener("click", () => {
+        if (Element.target !== imagenesLight) {
+          contenedorLight.classList.toggle("show");
+          imagenesLight.classList.toggle("showImage");
+        }
+      });
+
+      const aparecerImg = (imagen) => {
+        imagenesLight.src = imagen;
+        contenedorLight.classList.toggle("show");
+        imagenesLight.classList.toggle("showImage");
+      };
+    </script>
+    <script src="menu.js"></script>
+  </body>
+</html>
